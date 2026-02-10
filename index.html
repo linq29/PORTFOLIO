@@ -6,351 +6,8 @@
   <title>Ren — Portfolio</title>
   <meta name="description" content="Ren's portfolio: web designs and posters." />
 
-  <style>
-    :root{
-      --bg: #fefefe;
-      --text: #333;
-      --teal: #1aa6a6;
-      --teal-2: #0e7f7f;
-      --border: rgba(51,51,51,.12);
-      --muted: rgba(51,51,51,.72);
-      --shadow: 0 10px 30px rgba(0,0,0,.06);
-      --radius: 16px;
-      --max: 1080px;
-      --pad: 20px;
-    }
-
-    *{ box-sizing: border-box; }
-    html, body{ height: 100%; }
-    body{
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      line-height: 1.6;
-    }
-
-    a{ color: inherit; text-decoration: none; }
-    a:focus-visible{
-      outline: 3px solid rgba(26,166,166,.35);
-      outline-offset: 3px;
-      border-radius: 10px;
-    }
-
-    .container{
-      width: min(var(--max), calc(100% - var(--pad) * 2));
-      margin: 0 auto;
-    }
-
-    /* Header */
-    header{
-      position: sticky;
-      top: 0;
-      background: rgba(254,254,254,.86);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      z-index: 10;
-    }
-
-    .header-inner{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 14px 0;
-    }
-
-    .brand{
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      font-weight: 700;
-      letter-spacing: .2px;
-    }
-    .brand .dot{
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--teal);
-      box-shadow: 0 0 0 6px rgba(26,166,166,.12);
-      transform: translateY(-2px);
-    }
-    .brand small{
-      font-weight: 600;
-      color: var(--muted);
-    }
-
-    nav ul{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .nav-link{
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      color: var(--muted);
-      transition: 160ms ease;
-    }
-
-    .nav-link:hover{
-      color: var(--text);
-      border-color: var(--border);
-      background: rgba(26,166,166,.06);
-    }
-
-    .nav-link.active{
-      color: var(--teal-2);
-      border-color: rgba(26,166,166,.35);
-      background: rgba(26,166,166,.08);
-    }
-
-    /* Hero */
-    .hero{
-      padding: 34px 0 18px;
-    }
-    .hero h1{
-      margin: 0 0 8px;
-      font-size: clamp(26px, 4vw, 40px);
-      letter-spacing: -0.4px;
-      line-height: 1.15;
-    }
-    .hero p{
-      margin: 0;
-      color: var(--muted);
-      max-width: 70ch;
-    }
-    .hero .cta-row{
-      margin-top: 14px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .btn{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: white;
-      box-shadow: 0 6px 18px rgba(0,0,0,.04);
-      transition: 160ms ease;
-      font-weight: 650;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      border-color: rgba(26,166,166,.35);
-      box-shadow: 0 10px 26px rgba(0,0,0,.06);
-    }
-    .btn.primary{
-      background: var(--teal);
-      color: #fefefe;
-      border-color: rgba(0,0,0,.08);
-    }
-    .btn.primary:hover{
-      background: var(--teal-2);
-      border-color: rgba(0,0,0,.12);
-    }
-
-    /* Main / Cards */
-    main{
-      padding: 10px 0 36px;
-    }
-
-    .section-title{
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      margin: 22px 0 12px;
-    }
-    .section-title h2{
-      margin: 0;
-      font-size: 18px;
-      letter-spacing: .1px;
-    }
-    .section-title span{
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .grid{
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 16px;
-    }
-
-    .card{
-      grid-column: span 6;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: 180ms ease;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card:hover{
-      transform: translateY(-2px);
-      border-color: rgba(26,166,166,.30);
-    }
-
-    .thumb{
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      background: linear-gradient(135deg, rgba(26,166,166,.10), rgba(26,166,166,.02));
-      border-bottom: 1px solid var(--border);
-      display: grid;
-      place-items: center;
-    }
-
-    /* If you want real images later: replace the inner div with <img ...> */
-    .thumb .placeholder{
-      width: calc(100% - 26px);
-      height: calc(100% - 26px);
-      border-radius: 14px;
-      border: 1px dashed rgba(26,166,166,.45);
-      display: grid;
-      place-items: center;
-      color: rgba(14,127,127,.9);
-      font-weight: 700;
-      letter-spacing: .3px;
-      text-align: center;
-      padding: 10px;
-    }
-
-    .card-body{
-      padding: 14px 16px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex: 1;
-    }
-
-    .meta{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .tag{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--teal-2);
-      background: rgba(26,166,166,.10);
-      border: 1px solid rgba(26,166,166,.18);
-    }
-
-    .card h3{
-      margin: 0;
-      font-size: 16px;
-      letter-spacing: .1px;
-    }
-
-    .card p{
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .card-actions{
-      margin-top: auto;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .link{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 10px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: rgba(254,254,254,.7);
-      transition: 160ms ease;
-      font-weight: 650;
-      font-size: 13px;
-      color: var(--text);
-    }
-    .link:hover{
-      border-color: rgba(26,166,166,.35);
-      background: rgba(26,166,166,.06);
-      transform: translateY(-1px);
-    }
-
-    /* Footer */
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 30px;
-    }
-
-    .footer-inner{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .footer-inner p{
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .social{
-      display: flex;           /* flexbox as requested */
-      gap: 10px;
-      flex-wrap: wrap;         /* easy to add more later */
-      align-items: center;
-    }
-
-    .icon-btn{
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--border);
-      background: white;
-      transition: 160ms ease;
-      box-shadow: 0 6px 18px rgba(0,0,0,.04);
-    }
-    .icon-btn:hover{
-      border-color: rgba(26,166,166,.35);
-      background: rgba(26,166,166,.06);
-      transform: translateY(-1px);
-    }
-
-    /* Responsive */
-    @media (max-width: 860px){
-      .card{ grid-column: span 12; }
-      .header-inner{ padding: 12px 0; }
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
 <body>
@@ -386,12 +43,10 @@
 
       <div class="cta-row">
         <a class="btn primary" href="#web-designs" title="Jump to projects">
-          View web projects
-          <span aria-hidden="true">→</span>
+          View web projects <span aria-hidden="true">→</span>
         </a>
         <a class="btn" href="#posters" title="Jump to posters">
-          Posters section
-          <span aria-hidden="true">↘</span>
+          Posters section <span aria-hidden="true">↘</span>
         </a>
       </div>
     </section>
@@ -410,18 +65,16 @@
         <a class="thumb" href="#" aria-label="Open Project 01">
           <div class="placeholder">
             Thumbnail 01<br />
-            <span style="font-weight:600; opacity:.8;">(replace with screenshot)</span>
+            <span class="placeholder-sub">(replace with screenshot)</span>
           </div>
         </a>
         <div class="card-body">
           <div class="meta">
             <span class="tag">Web Design</span>
-            <span style="color: var(--muted); font-size: 13px;">2026</span>
+            <span class="year">2026</span>
           </div>
           <h3>Project 01 — Title</h3>
-          <p>
-            One-liner summary: what it is + who it’s for. Keep it short like a good espresso shot.
-          </p>
+          <p>One-liner summary: what it is + who it’s for.</p>
           <div class="card-actions">
             <a class="link" href="#" aria-label="Open live demo for Project 01">Live</a>
             <a class="link" href="#" aria-label="Open case study for Project 01">Case Study</a>
@@ -434,18 +87,16 @@
         <a class="thumb" href="#" aria-label="Open Project 02">
           <div class="placeholder">
             Thumbnail 02<br />
-            <span style="font-weight:600; opacity:.8;">(replace with screenshot)</span>
+            <span class="placeholder-sub">(replace with screenshot)</span>
           </div>
         </a>
         <div class="card-body">
           <div class="meta">
             <span class="tag">UI/UX</span>
-            <span style="color: var(--muted); font-size: 13px;">2026</span>
+            <span class="year">2026</span>
           </div>
           <h3>Project 02 — Title</h3>
-          <p>
-            Highlight the “why”: the problem you solved, the main design decision, and the outcome.
-          </p>
+          <p>Highlight the “why”: problem → decision → outcome.</p>
           <div class="card-actions">
             <a class="link" href="#" aria-label="Open live demo for Project 02">Live</a>
             <a class="link" href="#" aria-label="Open case study for Project 02">Case Study</a>
@@ -458,18 +109,16 @@
         <a class="thumb" href="#" aria-label="Open Project 03">
           <div class="placeholder">
             Thumbnail 03<br />
-            <span style="font-weight:600; opacity:.8;">(replace with screenshot)</span>
+            <span class="placeholder-sub">(replace with screenshot)</span>
           </div>
         </a>
         <div class="card-body">
           <div class="meta">
             <span class="tag">Front-end</span>
-            <span style="color: var(--muted); font-size: 13px;">2025</span>
+            <span class="year">2025</span>
           </div>
           <h3>Project 03 — Title</h3>
-          <p>
-            Mention tech lightly (if you want): “HTML/CSS/JS + Flask” — but keep the focus on design value.
-          </p>
+          <p>Mention tech lightly if you want, but keep it human.</p>
           <div class="card-actions">
             <a class="link" href="#" aria-label="Open live demo for Project 03">Live</a>
             <a class="link" href="#" aria-label="Open case study for Project 03">Case Study</a>
@@ -482,18 +131,16 @@
         <a class="thumb" href="#" aria-label="Open Project 04">
           <div class="placeholder">
             Thumbnail 04<br />
-            <span style="font-weight:600; opacity:.8;">(replace with screenshot)</span>
+            <span class="placeholder-sub">(replace with screenshot)</span>
           </div>
         </a>
         <div class="card-body">
           <div class="meta">
             <span class="tag">Brand / Visual</span>
-            <span style="color: var(--muted); font-size: 13px;">2025</span>
+            <span class="year">2025</span>
           </div>
           <h3>Project 04 — Title</h3>
-          <p>
-            If this is a redesign, say the “before → after” in one sentence. Like magic, but with CSS.
-          </p>
+          <p>If redesign: say “before → after” in one sentence.</p>
           <div class="card-actions">
             <a class="link" href="#" aria-label="Open live demo for Project 04">Live</a>
             <a class="link" href="#" aria-label="Open case study for Project 04">Case Study</a>
@@ -502,21 +149,14 @@
       </article>
     </section>
 
-    <!-- Posters section placeholder (since you asked nav to include it) -->
-    <div class="section-title" id="posters" style="margin-top: 26px;">
+    <!-- Posters section placeholder -->
+    <div class="section-title" id="posters">
       <h2>Posters</h2>
       <span>add later</span>
     </div>
 
     <section aria-label="Posters placeholder">
-      <div style="
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        background: white;
-        box-shadow: var(--shadow);
-        padding: 16px;
-        color: var(--muted);
-      ">
+      <div class="poster-placeholder">
         Posters section placeholder — you can add a grid here later (same card style).
       </div>
     </section>
@@ -529,49 +169,28 @@
         <p>© <span id="year"></span> Ren. Built with calm vibes + teal.</p>
 
         <div class="social" aria-label="Social links">
-          <!-- GitHub -->
           <a class="icon-btn" href="#" aria-label="GitHub" title="GitHub">
-            <!-- Simple inline icon (no external library) -->
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M12 2C6.477 2 2 6.57 2 12.23c0 4.52 2.865 8.36 6.839 9.71.5.1.682-.22.682-.48 0-.24-.009-.88-.014-1.73-2.782.62-3.369-1.37-3.369-1.37-.455-1.18-1.11-1.49-1.11-1.49-.907-.64.069-.63.069-.63 1.003.07 1.531 1.05 1.531 1.05.892 1.56 2.341 1.11 2.91.85.091-.67.349-1.11.635-1.36-2.22-.26-4.555-1.14-4.555-5.08 0-1.12.389-2.03 1.027-2.74-.103-.26-.446-1.3.098-2.71 0 0 .84-.27 2.75 1.05A9.33 9.33 0 0 1 12 6.84c.85 0 1.705.12 2.504.34 1.909-1.32 2.748-1.05 2.748-1.05.546 1.41.203 2.45.1 2.71.64.71 1.025 1.62 1.025 2.74 0 3.95-2.338 4.82-4.566 5.08.359.32.679.95.679 1.92 0 1.39-.013 2.51-.013 2.85 0 .27.18.59.688.49C19.138 20.58 22 16.75 22 12.23 22 6.57 17.523 2 12 2Z"
                     fill="currentColor" opacity=".9"/>
             </svg>
           </a>
 
-          <!-- Instagram -->
           <a class="icon-btn" href="#" aria-label="Instagram" title="Instagram">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Z" fill="currentColor" opacity=".9"/>
-              <path d="M12 7.2A4.8 4.8 0 1 1 7.2 12 4.81 4.81 0 0 1 12 7.2Zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2Z" fill="currentColor" opacity=".9"/>
+              <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Z"
+                    fill="currentColor" opacity=".9"/>
+              <path d="M12 7.2A4.8 4.8 0 1 1 7.2 12 4.81 4.81 0 0 1 12 7.2Zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2Z"
+                    fill="currentColor" opacity=".9"/>
               <path d="M17.4 6.6a.8.8 0 1 1-.8-.8.8.8 0 0 1 .8.8Z" fill="currentColor"/>
             </svg>
           </a>
-
-          <!-- Add more icons later by copying another <a class="icon-btn">...</a> -->
         </div>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Set footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Small nicety: active nav link based on scroll (optional, lightweight)
-    const links = [...document.querySelectorAll(".nav-link")];
-    const sections = links.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
-
-    const setActive = () => {
-      const y = window.scrollY + 120;
-      let current = sections[0]?.id || "profile";
-      for (const s of sections) {
-        if (s.offsetTop <= y) current = s.id;
-      }
-      links.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + current));
-    };
-
-    window.addEventListener("scroll", setActive, { passive: true });
-    setActive();
-  </script>
+  <!-- JS -->
+  <script src="./js/main.js" defer></script>
 </body>
 </html>
