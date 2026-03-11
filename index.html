@@ -1,10 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ren — Portfolio</title>
-  <meta name="description" content="Ren's portfolio: web designs and posters." />
+  <title>林秋静 — 制作物セレクション</title>
+  <meta name="description" content="林秋静のWeb制作ポートフォリオです。" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/styles.css" />
@@ -15,17 +20,16 @@
   <header>
     <div class="container">
       <div class="header-inner">
-        <a class="brand" href="#top" aria-label="Go to top">
+        <a target="_blank" rel="noopener noreferrer" class="brand" href="#top" aria-label="ページ上部へ移動">
           <span class="dot" aria-hidden="true"></span>
-          <span>Ren</span>
-          <small>Portfolio</small>
+          <span>林秋静</span>
+          <small>ポートフォリオ</small>
         </a>
 
-        <nav aria-label="Primary navigation">
+        <nav aria-label="メインナビゲーション">
           <ul>
-            <li><a class="nav-link active" href="#profile">Profile</a></li>
-            <li><a class="nav-link" href="#web-designs">Web Designs</a></li>
-            <li><a class="nav-link" href="#posters">Posters</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" class="nav-link active" href="#profile">プロフィール</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" class="nav-link" href="#web-designs">Web制作</a></li>
           </ul>
         </nav>
       </div>
@@ -35,130 +39,104 @@
   <!-- Profile / Hero -->
   <div id="top" class="container">
     <section id="profile" class="hero">
-      <h1>Design-first web work, built clean.</h1>
+      <h1>プロフィール</h1>
       <p>
-        A compact portfolio layout with a teal accent, calm background, and readable typography.
-        Swap the placeholders with your real thumbnails + links whenever you’re ready.
+        大学で会計を学び、オーストラリア留学を経て、以前から憧れていたデザインの道に進みました。<br/>
+        広告会社で約4年半、グラフィックデザイナーとして商品ページ制作やSNS向けクリエイティブなど、<br/>
+        幅広い案件に携わってきました。
+      </p>
+      <p>
+        制作を重ねる中でWeb開発への関心が高まり、デザインと実装の両方を磨くために日本で学んでいます。<br/>
+        ここでは、専門学校入学後１年半で制作したWeb作品の一部をまとめています。
       </p>
 
-      <div class="cta-row">
-        <a class="btn primary" href="#web-designs" title="Jump to projects">
-          View web projects <span aria-hidden="true">→</span>
+      <!-- <div class="cta-row">
+        <a target="_blank" rel="noopener noreferrer" class="btn primary" href="#web-designs" title="制作実績へ移動">
+          Web制作を見る <span aria-hidden="true">→</span>
         </a>
-        <a class="btn" href="#posters" title="Jump to posters">
-          Posters section <span aria-hidden="true">↘</span>
-        </a>
-      </div>
+      </div> -->
     </section>
   </div>
 
   <!-- Main -->
   <main class="container">
     <div class="section-title" id="web-designs">
-      <h2>Web design projects</h2>
-      <span>4 selected works</span>
+      <h2>Web制作プロジェクト</h2>
+      <span>選抜4件</span>
     </div>
 
-    <section class="grid" aria-label="Web design project grid">
-      <!-- Project 1 -->
+    <section class="grid" aria-label="Web制作プロジェクト一覧">
       <article class="card">
-        <a class="thumb" href="#" aria-label="Open Project 01">
-          <div class="placeholder">
-            Thumbnail 01<br />
-            <span class="placeholder-sub">(replace with screenshot)</span>
-          </div>
+        <a target="_blank" rel="noopener noreferrer" class="thumb" href="#" aria-label="十二支詣のプロジェクトを開く">
+          <img src="./images/01-12mode.jpg" alt="個人制作『十二支詣〜干支にまつわる神社探し〜』のサムネイル" loading="lazy" />
         </a>
         <div class="card-body">
           <div class="meta">
-            <span class="tag">Web Design</span>
-            <span class="year">2026</span>
-          </div>
-          <h3>Project 01 — Title</h3>
-          <p>One-liner summary: what it is + who it’s for.</p>
-          <div class="card-actions">
-            <a class="link" href="#" aria-label="Open live demo for Project 01">Live</a>
-            <a class="link" href="#" aria-label="Open case study for Project 01">Case Study</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 2 -->
-      <article class="card">
-        <a class="thumb" href="#" aria-label="Open Project 02">
-          <div class="placeholder">
-            Thumbnail 02<br />
-            <span class="placeholder-sub">(replace with screenshot)</span>
-          </div>
-        </a>
-        <div class="card-body">
-          <div class="meta">
-            <span class="tag">UI/UX</span>
-            <span class="year">2026</span>
-          </div>
-          <h3>Project 02 — Title</h3>
-          <p>Highlight the “why”: problem → decision → outcome.</p>
-          <div class="card-actions">
-            <a class="link" href="#" aria-label="Open live demo for Project 02">Live</a>
-            <a class="link" href="#" aria-label="Open case study for Project 02">Case Study</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 3 -->
-      <article class="card">
-        <a class="thumb" href="#" aria-label="Open Project 03">
-          <div class="placeholder">
-            Thumbnail 03<br />
-            <span class="placeholder-sub">(replace with screenshot)</span>
-          </div>
-        </a>
-        <div class="card-body">
-          <div class="meta">
-            <span class="tag">Front-end</span>
+            <span class="tag">個人制作 / 神社検索</span>
             <span class="year">2025</span>
           </div>
-          <h3>Project 03 — Title</h3>
-          <p>Mention tech lightly if you want, but keep it human.</p>
+          <h3>個人制作「十二支詣〜干支にまつわる神社探し〜」</h3>
+          <p>干支にゆかりのある神社を探せる検索サイト。モチーフ性と実用性の両立を意識して設計しました。</p>
           <div class="card-actions">
-            <a class="link" href="#" aria-label="Open live demo for Project 03">Live</a>
-            <a class="link" href="#" aria-label="Open case study for Project 03">Case Study</a>
+            <a target="_blank" rel="noopener noreferrer" class="link" href="#" aria-label="十二支詣の公開ページを見る">公開ページ</a>
+            <a target="_blank" rel="noopener noreferrer" class="link" href="#" aria-label="十二支詣の制作詳細を見る">制作詳細</a>
           </div>
         </div>
       </article>
 
-      <!-- Project 4 -->
       <article class="card">
-        <a class="thumb" href="#" aria-label="Open Project 04">
-          <div class="placeholder">
-            Thumbnail 04<br />
-            <span class="placeholder-sub">(replace with screenshot)</span>
-          </div>
+        <a target="_blank" rel="noopener noreferrer" class="thumb" href="#" aria-label="デジタル昭和横丁のプロジェクトを開く">
+          <img src="./images/02-dagashi.jpg" alt="駄菓子ECサイト『デジタル昭和横丁』のサムネイル" loading="lazy" />
         </a>
         <div class="card-body">
           <div class="meta">
-            <span class="tag">Brand / Visual</span>
+            <span class="tag">ECサイト / UI設計</span>
             <span class="year">2025</span>
           </div>
-          <h3>Project 04 — Title</h3>
-          <p>If redesign: say “before → after” in one sentence.</p>
+          <h3>駄菓子ECサイト「デジタル昭和横丁」</h3>
+          <p>昭和レトロな世界観を軸に、商品一覧から購入までの導線を設計した駄菓子ECサイトです。</p>
           <div class="card-actions">
-            <a class="link" href="#" aria-label="Open live demo for Project 04">Live</a>
-            <a class="link" href="#" aria-label="Open case study for Project 04">Case Study</a>
+            <a target="_blank" rel="noopener noreferrer" class="link" href="https://github.com/linq29/dagashiya-DEMO" aria-label="デジタル昭和横丁の公開ページを見る">GitHub</a>
+            <a target="_blank" rel="noopener noreferrer" class="link" href="https://drive.google.com/drive/folders/1TYxzB9BxddMplKNffnigVGXe3BVLwwkA?usp=drive_link" aria-label="デジタル昭和横丁の制作詳細を見る">出展資料</a>
           </div>
         </div>
       </article>
-    </section>
 
-    <!-- Posters section placeholder -->
-    <div class="section-title" id="posters">
-      <h2>Posters</h2>
-      <span>add later</span>
-    </div>
+      <article class="card">
+        <a target="_blank" rel="noopener noreferrer" class="thumb" href="#" aria-label="Mili unofficial websiteのプロジェクトを開く">
+          <img src="./images/03-mili.jpg" alt="アーティスト情報サイト『Mili (Un)official Website』のサムネイル" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="meta">
+            <span class="tag">アーティスト情報</span>
+            <span class="year">2025</span>
+          </div>
+          <h3>アーティスト情報サイト「Mili (Un)official Website」</h3>
+          <p>楽曲・アルバム・関連情報を整理して閲覧できる、非公式のアーティスト情報サイトです。</p>
+          <div class="card-actions">
+            <a target="_blank" rel="noopener noreferrer" class="link" href="#" aria-label="Mili unofficial websiteの公開ページを見る">公開ページ</a>
+            <a target="_blank" rel="noopener noreferrer" class="link" href="#" aria-label="Mili unofficial websiteの制作詳細を見る">制作詳細</a>
+          </div>
+        </div>
+      </article>
 
-    <section aria-label="Posters placeholder">
-      <div class="poster-placeholder">
-        Posters section placeholder — you can add a grid here later (same card style).
-      </div>
+      <article class="card">
+        <a target="_blank" rel="noopener noreferrer" class="thumb" href="#" aria-label="サマーウォーズのプロジェクトを開く">
+          <img src="./images/04-sw.jpg" alt="映画情報サイト『サマーウォーズ』のサムネイル" loading="lazy" />
+        </a>
+        <div class="card-body">
+          <div class="meta">
+            <span class="tag">映画情報 / 特集ページ</span>
+            <span class="year">2025</span>
+          </div>
+          <h3>映画情報サイト「サマーウォーズ」</h3>
+          <p>作品の世界観を視覚的に伝えつつ、あらすじや関連情報を整理した映画情報サイトです。</p>
+          <div class="card-actions">
+            <a target="_blank" rel="noopener noreferrer" class="link" href="#" aria-label="サマーウォーズの公開ページを見る">公開ページ</a>
+            <a target="_blank" rel="noopener noreferrer" class="link" href="#" aria-label="サマーウォーズの制作詳細を見る">制作詳細</a>
+          </div>
+        </div>
+      </article>
     </section>
   </main>
 
@@ -166,17 +144,17 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <p>© <span id="year"></span> Ren. Built with calm vibes + teal.</p>
+        <p>© <span id="year"></span> 林秋静. 落ち着いたトーンで制作。</p>
 
-        <div class="social" aria-label="Social links">
-          <a class="icon-btn" href="#" aria-label="GitHub" title="GitHub">
+        <div class="social" aria-label="SNSリンク">
+          <a target="_blank" rel="noopener noreferrer" class="icon-btn" href="#" aria-label="GitHub" title="GitHub">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M12 2C6.477 2 2 6.57 2 12.23c0 4.52 2.865 8.36 6.839 9.71.5.1.682-.22.682-.48 0-.24-.009-.88-.014-1.73-2.782.62-3.369-1.37-3.369-1.37-.455-1.18-1.11-1.49-1.11-1.49-.907-.64.069-.63.069-.63 1.003.07 1.531 1.05 1.531 1.05.892 1.56 2.341 1.11 2.91.85.091-.67.349-1.11.635-1.36-2.22-.26-4.555-1.14-4.555-5.08 0-1.12.389-2.03 1.027-2.74-.103-.26-.446-1.3.098-2.71 0 0 .84-.27 2.75 1.05A9.33 9.33 0 0 1 12 6.84c.85 0 1.705.12 2.504.34 1.909-1.32 2.748-1.05 2.748-1.05.546 1.41.203 2.45.1 2.71.64.71 1.025 1.62 1.025 2.74 0 3.95-2.338 4.82-4.566 5.08.359.32.679.95.679 1.92 0 1.39-.013 2.51-.013 2.85 0 .27.18.59.688.49C19.138 20.58 22 16.75 22 12.23 22 6.57 17.523 2 12 2Z"
                     fill="currentColor" opacity=".9"/>
             </svg>
           </a>
 
-          <a class="icon-btn" href="#" aria-label="Instagram" title="Instagram">
+          <a target="_blank" rel="noopener noreferrer" class="icon-btn" href="#" aria-label="Instagram" title="Instagram">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Z"
                     fill="currentColor" opacity=".9"/>

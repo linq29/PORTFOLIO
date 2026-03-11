@@ -18,7 +18,7 @@ body{
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-family: "LINE Seed JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   line-height: 1.6;
 }
 
@@ -211,23 +211,11 @@ main{
   place-items: center;
 }
 
-.placeholder{
-  width: calc(100% - 26px);
-  height: calc(100% - 26px);
-  border-radius: 14px;
-  border: 1px dashed rgba(26,166,166,.45);
-  display: grid;
-  place-items: center;
-  color: rgba(14,127,127,.9);
-  font-weight: 700;
-  letter-spacing: .3px;
-  text-align: center;
-  padding: 10px;
-}
-
-.placeholder-sub{
-  font-weight: 600;
-  opacity: .8;
+.thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .card-body{
@@ -301,15 +289,6 @@ main{
   border-color: rgba(26,166,166,.35);
   background: rgba(26,166,166,.06);
   transform: translateY(-1px);
-}
-
-.poster-placeholder{
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: white;
-  box-shadow: var(--shadow);
-  padding: 16px;
-  color: var(--muted);
 }
 
 /* Footer */
