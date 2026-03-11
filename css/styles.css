@@ -12,9 +12,10 @@
 }
 
 *{ box-sizing: border-box; }
-html, body{ height: 100%; }
+html{ height: 100%; }
 
 body{
+  min-height: 100%;
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -37,12 +38,13 @@ a:focus-visible{
 
 /* Header */
 header{
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background: rgba(254,254,254,.86);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
-  z-index: 10;
+  z-index: 100;
 }
 
 .header-inner{
@@ -110,7 +112,7 @@ nav ul{
 /* Hero */
 .hero{
   padding: 34px 0 18px;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 .hero h1{
   margin: 0 0 8px;
@@ -170,7 +172,7 @@ main{
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  margin: 22px 0 12px;
+  margin: 42px 0 12px;
 }
 .section-title h2{
   margin: 0;
@@ -294,6 +296,59 @@ main{
   transform: translateY(-1px);
 }
 
+/* Side projects */
+.side-scroll{
+  --visible-cards: 4;
+  --side-gap: 16px;
+  display: flex;
+  gap: var(--side-gap);
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+}
+
+.side-card{
+  flex: 0 0 calc((100% - (var(--side-gap) * (var(--visible-cards) - 1))) / var(--visible-cards));
+  min-width: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: 180ms ease;
+  scroll-snap-align: start;
+}
+
+.side-card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(26,166,166,.30);
+}
+
+.side-thumb{
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2; /* 600 x 400 */
+  background: linear-gradient(135deg, rgba(26,166,166,.10), rgba(26,166,166,.02));
+  border-bottom: 1px solid var(--border);
+}
+
+.side-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.side-card-body{
+  gap: 8px;
+}
+
+.side-card h3{
+  font-size: 16px;
+  margin: 8px 0;
+}
+
 /* Footer */
 footer{
   border-top: 1px solid var(--border);
@@ -342,4 +397,9 @@ footer{
 @media (max-width: 860px){
   .card{ grid-column: span 12; }
   .header-inner{ padding: 12px 0; }
+  .side-scroll{ --visible-cards: 2.2; }
+}
+
+@media (max-width: 560px){
+  .side-scroll{ --visible-cards: 1.2; }
 }
