@@ -60,7 +60,6 @@ window.PORTFOLIO_TRANSLATIONS.ja = {
   "side.portfolio.thumbAlt": "サイドプロジェクト「ポートフォリオ（Here!）」のサムネイル",
   "side.portfolio.tag": "ポートフォリオ",
   "side.portfolio.title": "ポートフォリオ",
-  "side.portfolio.small": "（Here!）",
   "side.portfolio.githubAria": "ポートフォリオのGitHubリポジトリを見る",
   "side.jinjaz.thumbAria": "JINJAZ!のGitHubリポジトリを開く",
   "side.jinjaz.thumbAlt": "サイドプロジェクト「JINJAZ! 神社巡礼メモ」のサムネイル",
