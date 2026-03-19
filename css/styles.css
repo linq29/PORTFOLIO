@@ -373,6 +373,8 @@ main{
   border-bottom: 1px solid var(--border);
 }
 
+div.side-thumb{ cursor: default; }
+
 .side-thumb img{
   width: 100%;
   height: 100%;
@@ -431,6 +433,30 @@ footer{
   border-color: rgba(26,166,166,.35);
   background: rgba(26,166,166,.06);
   transform: translateY(-1px);
+}
+
+/* hover-tip */
+.hover-tip{
+  position: fixed;
+  pointer-events: none;
+  z-index: 200;
+  background: rgba(254,254,254,.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--teal);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 140ms ease, transform 140ms ease;
+}
+.hover-tip.visible{
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive */
