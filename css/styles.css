@@ -90,6 +90,7 @@ nav ul{
 .nav-link{
   display: inline-flex;
   align-items: center;
+  font-size: 14px;
   padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid transparent;
