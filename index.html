@@ -22,24 +22,22 @@
   <header>
     <div class="container">
       <div class="header-inner">
-        <a target="_blank" href="#top" class="brand" aria-label="ページ上部へ移動" data-i18n-aria-label="brand.topAria">
+        <a target="_blank" href="#top" aria-label="ページ上部へ移動">
           <span class="dot" aria-hidden="true"></span>
-          <span data-i18n="header.name">林秋静</span>
-          <small data-i18n="header.label">ポートフォリオ</small>
+          <span>林秋静</span>
+          <small>ポートフォリオ</small>
         </a>
 
-        <div class="header-actions">
-          <nav aria-label="メインナビゲーション" data-i18n-aria-label="nav.aria">
-            <ul>
-              <li><a class="nav-link active" href="#profile" data-i18n="nav.profile">プロフィール</a></li>
-              <li><a class="nav-link" href="#web-designs" data-i18n="nav.webDesigns">Web制作</a></li>
-              <li><a class="nav-link" href="#side-projects" data-i18n="nav.sideProjects">サイドプロジェクト</a></li>
-            </ul>
-          </nav>
-          <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to English" title="Switch to English">
-            EN
-          </button>
-        </div>
+        <nav aria-label="メインナビゲーション">
+          <ul>
+            <li><a class="nav-link active" href="#profile">プロフィール</a></li>
+            <li><a class="nav-link" href="#web-designs">Web制作</a></li>
+            <li><a class="nav-link" href="#side-projects">サイドプロジェクト</a></li>
+            <li>
+              <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to English" title="Switch to English">EN</button>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
@@ -47,24 +45,24 @@
   <!-- Profile / Hero -->
   <div id="top" class="container">
     <section id="profile" class="hero">
-      <h1 data-i18n="hero.title">Profile</h1>
-      <p data-i18n-html="hero.intro1">
+      <h1>Profile</h1>
+      <p>
         大学で会計を学び、オーストラリア留学を経て、以前から憧れていたデザインの道に進みました。<br />
         広告会社で約4年半、グラフィックデザイナーとして商品ページ制作やSNS向けクリエイティブなど、<br />
         幅広い案件に携わってきました。
       </p>
-      <p data-i18n-html="hero.intro2">
+      <p>
         制作を重ねる中でWeb開発への関心が高まり、<br />
         デザインと実装スキルの両方を磨くために日本で学んでいます。<br />
         ここでは、専門学校入学後１年半で制作したWeb作品の一部をまとめています。
       </p>
 
       <div class="cta-row">
-        <a class="btn primary" href="#web-designs" title="Web制作へ" data-i18n-title="hero.ctaWebTitle">
-          <span data-i18n="hero.ctaWeb">Web制作</span><span aria-hidden="true">↓</span>
+        <a class="btn primary" href="#web-designs" title="Web制作へ">
+          Web制作<span aria-hidden="true">↓</span>
         </a>
-        <a class="btn primary" href="#side-projects" title="サイドプロジェクトへ" data-i18n-title="hero.ctaSideTitle">
-          <span data-i18n="hero.ctaSide">サイドプロジェクト</span><span aria-hidden="true">↓</span>
+        <a class="btn primary" href="#side-projects" title="サイドプロジェクトへ">
+          サイドプロジェクト<span aria-hidden="true">↓</span>
         </a>
       </div>
     </section>
@@ -73,96 +71,98 @@
   <!-- Main -->
   <main class="container">
     <div class="section-title" id="web-designs">
-      <h2 data-i18n="sections.webDesigns">Web制作</h2>
+      <h2>Web制作</h2>
     </div>
 
-    <section class="grid" aria-label="Web制作一覧" data-i18n-aria-label="sections.webDesignsAria">
+    <section class="grid" aria-label="Web制作一覧">
 
       <article class="card">
         <a target="_blank" rel="noopener noreferrer" class="thumb"
-          href="https://drive.google.com/drive/folders/1TYxzB9BxddMplKNffnigVGXe3BVLwwkA?usp=drive_link"
-          aria-label="デジタル昭和横丁の出展資料を開く" data-i18n-aria-label="web.dagashi.thumbAria">
-          <img src="./images/02-dagashi.jpg" alt="駄菓子ECサイト『デジタル昭和横丁』のサムネイル" data-i18n-alt="web.dagashi.thumbAlt" loading="lazy" />
+          href="https://dagashiya.onrender.com/"
+          aria-label="デジタル昭和横丁のページを開く">
+          <img src="./images/02-dagashi.jpg" alt="駄菓子ECサイト『デジタル昭和横丁』のサムネイル" loading="lazy" />
         </a>
         <div class="card-body">
           <div class="meta">
-            <span class="tag" data-i18n="web.dagashi.tag">フロントエンド設計・実装</span>
+            <span class="tag">フロントエンド設計・実装</span>
             <span class="year">2026.03</span>
           </div>
-          <h3 data-i18n="web.dagashi.title">駄菓子ECサイト「デジタル昭和横丁」</h3>
-          <p data-i18n="web.dagashi.desc">昭和レトロな世界観を軸に、画面設計からフロントエンド実装まで担当した駄菓子ECサイトです。2年次進級制作展ビジュアル賞受賞。</p>
+          <h3>駄菓子ECサイト「デジタル昭和横丁」</h3>
+          <p>昭和レトロな世界観を軸に、画面設計からフロントエンド実装まで担当した駄菓子ECサイトです。2年次進級制作展ビジュアル賞受賞。</p>
           <div class="card-actions">
             <a target="_blank" rel="noopener noreferrer" class="link" href="https://github.com/linq29/dagashiya-DEMO"
-              aria-label="デジタル昭和横丁のGitHubリポジトリを見る" data-i18n-aria-label="web.dagashi.githubAria">GitHub</a>
+              aria-label="デジタル昭和横丁のGitHubリポジトリを見る">GitHub</a>
             <a target="_blank" rel="noopener noreferrer" class="link"
               href="https://drive.google.com/drive/folders/1TYxzB9BxddMplKNffnigVGXe3BVLwwkA?usp=drive_link"
-              aria-label="デジタル昭和横丁の出展資料を見る" data-i18n-aria-label="web.dagashi.slidesAria" data-i18n="common.GDrive">出展資料</a>
+              aria-label="デジタル昭和横丁の出展資料を見る">出展資料</a>
+            <a target="_blank" rel="noopener noreferrer" class="link" href="https://dagashiya.onrender.com/"
+              aria-label="デジタル昭和横丁のページを見る">公開ページ</a>
           </div>
         </div>
       </article>
       <article class="card">
         <a target="_blank" rel="noopener noreferrer" class="thumb" href="https://junishi-mode.onrender.com"
-          aria-label="十二支詣のページを開く" data-i18n-aria-label="web.junishi.thumbAria">
+          aria-label="十二支詣のページを開く">
 
-          <img src="./images/01-12mode.jpg" alt="個人制作「十二支詣〜干支にまつわる神社探し〜」のサムネイル" data-i18n-alt="web.junishi.thumbAlt" loading="lazy" />
+          <img src="./images/01-12mode.jpg" alt="個人制作「十二支詣〜干支にまつわる神社探し〜」のサムネイル" loading="lazy" />
         </a>
         <div class="card-body">
           <div class="meta">
-            <span class="tag" data-i18n="web.junishi.tag">企画から実装まで個人制作</span>
+            <span class="tag">企画から実装まで個人制作</span>
             <span class="year">2025/26.03</span>
           </div>
-          <h3 data-i18n="web.junishi.title">「十二支詣〜干支にまつわる神社探し〜」</h3>
-          <p data-i18n="web.junishi.desc">干支にゆかりのある神社を探せる検索サイト。立案から実装、後ほどのリニューアルまで一貫して個人制作。1年次進級制作展銀賞受賞。</p>
+          <h3>「十二支詣〜干支にまつわる神社探し〜」</h3>
+          <p>干支にゆかりのある神社を探せる検索サイト。立案から実装、後ほどのリニューアルまで一貫して個人制作。1年次進級制作展銀賞受賞。</p>
           <div class="card-actions">
             <a target="_blank" rel="noopener noreferrer" class="link" href="https://github.com/linq29/12MODE"
-              aria-label="十二支詣の制作詳細を見る" data-i18n-aria-label="web.junishi.githubAria">GitHub</a>
+              aria-label="十二支詣の制作詳細を見る">GitHub</a>
             <a target="_blank" rel="noopener noreferrer" class="link" href="https://junishi-mode.onrender.com"
-              aria-label="十二支詣のページを見る" data-i18n-aria-label="web.junishi.liveAria" data-i18n="common.liveSite">公開ページ</a>
+              aria-label="十二支詣のページを見る">公開ページ</a>
           </div>
         </div>
       </article>
 
       <article class="card">
         <a target="_blank" rel="noopener noreferrer" class="thumb" href="https://linq29.github.io/WF18-Kadai6-PW51A01/"
-          aria-label="Mili (Un)official Websiteのページを開く" data-i18n-aria-label="web.mili.thumbAria">
-          <img src="./images/03-mili.jpg" alt="アーティスト情報サイト『Mili (Un)official Website』のサムネイル" data-i18n-alt="web.mili.thumbAlt" loading="lazy" />
+          aria-label="Mili (Un)official Websiteのページを開く">
+          <img src="./images/03-mili.jpg" alt="アーティスト情報サイト『Mili (Un)official Website』のサムネイル" loading="lazy" />
         </a>
         <div class="card-body">
           <div class="meta">
-            <span class="tag" data-i18n="web.mili.tag">コンテンツ構造・Webデザイン</span>
+            <span class="tag">コンテンツ構造・Webデザイン</span>
             <span class="year">2025.02</span>
           </div>
-          <h3 data-i18n="web.mili.title">「Mili (Un)official Website」</h3>
-          <p data-i18n="web.mili.desc">メンバー紹介・ディスコグラフィー・特設サイトなどの関連情報を整理して閲覧できる、非公式のアーティスト情報サイト。</p>
+          <h3>「Mili (Un)official Website」</h3>
+          <p>メンバー紹介・ディスコグラフィー・特設サイトなどの関連情報を整理して閲覧できる、非公式のアーティスト情報サイト。</p>
           <div class="card-actions">
             <a target="_blank" rel="noopener noreferrer" class="link"
               href="https://github.com/linq29/WF18-Kadai6-PW51A01"
-              aria-label="Mili (Un)official WebsiteのGitHubリポジトリを見る" data-i18n-aria-label="web.mili.githubAria">GitHub</a>
+              aria-label="Mili (Un)official WebsiteのGitHubリポジトリを見る">GitHub</a>
             <a target="_blank" rel="noopener noreferrer" class="link"
               href="https://linq29.github.io/WF18-Kadai6-PW51A01/"
-              aria-label="Mili (Un)official Websiteのページを見る" data-i18n-aria-label="web.mili.pageAria" data-i18n="common.page">ページ</a>
+              aria-label="Mili (Un)official Websiteのページを見る">ページ</a>
           </div>
         </div>
       </article>
 
       <article class="card">
         <a target="_blank" rel="noopener noreferrer" class="thumb" href="https://linq29.github.io/WF18-Kadai5-PW51A01/"
-          aria-label="サマーウォーズ SUMMER WARSのページを開く" data-i18n-aria-label="web.sw.thumbAria">
-          <img src="./images/04-sw.jpg" alt="映画情報サイト『サマーウォーズ』のサムネイル" data-i18n-alt="web.sw.thumbAlt" loading="lazy" />
+          aria-label="サマーウォーズ SUMMER WARSのページを開く">
+          <img src="./images/04-sw.jpg" alt="映画情報サイト『サマーウォーズ』のサムネイル" loading="lazy" />
         </a>
         <div class="card-body">
           <div class="meta">
-            <span class="tag" data-i18n="web.sw.tag">初めてのWebデザイン</span>
+            <span class="tag">初めてのWebデザイン</span>
             <span class="year">2024.12</span>
           </div>
-          <h3 data-i18n="web.sw.title">「サマーウォーズ SUMMER WARS」</h3>
-          <p data-i18n="web.sw.desc">映画の世界観を活かして、作品紹介・キャラクター情報・ストーリー解説を閲覧できる情報サイト。</p>
+          <h3>「サマーウォーズ SUMMER WARS」</h3>
+          <p>映画の世界観を活かして、作品紹介・キャラクター情報・ストーリー解説を閲覧できる情報サイト。</p>
           <div class="card-actions">
             <a target="_blank" rel="noopener noreferrer" class="link"
               href="https://github.com/linq29/WF18-Kadai5-PW51A01"
-              aria-label="サマーウォーズ SUMMER WARSのGitHubリポジトリを見る" data-i18n-aria-label="web.sw.githubAria">GitHub</a>
+              aria-label="サマーウォーズ SUMMER WARSのGitHubリポジトリを見る">GitHub</a>
             <a target="_blank" rel="noopener noreferrer" class="link"
-              href="https://linq29.github.io/WF18-Kadai5-PW51A01/" aria-label="サマーウォーズ SUMMER WARSのページを見る" data-i18n-aria-label="web.sw.pageAria" data-i18n="common.page">ページ</a>
+              href="https://linq29.github.io/WF18-Kadai5-PW51A01/" aria-label="サマーウォーズ SUMMER WARSのページを見る">ページ</a>
 
           </div>
         </div>
@@ -170,44 +170,44 @@
     </section>
 
     <div class="section-title" id="side-projects">
-      <h2 data-i18n="sections.sideProjects">サイドプロジェクト</h2>
+      <h2>サイドプロジェクト</h2>
     </div>
 
-    <section class="side-scroll" aria-label="サイドプロジェクト一覧" data-i18n-aria-label="sections.sideProjectsAria">
+    <section class="side-scroll" aria-label="サイドプロジェクト一覧">
       <article class="side-card">
         <a target="_blank" rel="noopener noreferrer" class="side-thumb"
-          href="https://github.com/linq29/PORTFOLIO" aria-label="ポートフォリオのGitHubリポジトリを開く" data-i18n-aria-label="side.portfolio.thumbAria">
-          <img src="./images/sd-port.jpg" alt="サイドプロジェクト「ポートフォリオ（Here!）」のサムネイル" data-i18n-alt="side.portfolio.thumbAlt" loading="lazy" width="600"
+          href="https://github.com/linq29/PORTFOLIO" aria-label="ポートフォリオのGitHubリポジトリを開く">
+          <img src="./images/sd-port.jpg" alt="サイドプロジェクト「ポートフォリオ（Here!）」のサムネイル" loading="lazy" width="600"
             height="400" />
         </a>
         <div class="card-body side-card-body">
           <div class="meta">
-            <span class="tag" data-i18n="side.portfolio.tag">ポートフォリオ</span>
+            <span class="tag">ポートフォリオ</span>
             <span class="year">2026.03</span>
           </div>
-          <h3><span data-i18n="side.portfolio.title">ポートフォリオ</span><small data-i18n="side.portfolio.small">（Here!）</small></h3>
+          <h3>ポートフォリオ<small>（Here!）</small></h3>
           <div class="card-actions">
             <a target="_blank" rel="noopener noreferrer" class="link" href="https://github.com/linq29/PORTFOLIO"
-              aria-label="ポートフォリオのGitHubリポジトリを見る" data-i18n-aria-label="side.portfolio.githubAria">GitHub</a>
+              aria-label="ポートフォリオのGitHubリポジトリを見る">GitHub</a>
           </div>
         </div>
       </article>
 
       <article class="side-card">
         <a target="_blank" rel="noopener noreferrer" class="side-thumb"
-          href="https://github.com/linq29/JS23-Kadai6-PW52A05" aria-label="JINJAZ!のGitHubリポジトリを開く" data-i18n-aria-label="side.jinjaz.thumbAria">
-          <img src="./images/sd-jinjaz.jpg" alt="サイドプロジェクト「JINJAZ! 神社巡礼メモ」のサムネイル" data-i18n-alt="side.jinjaz.thumbAlt" loading="lazy" width="600"
+          href="https://github.com/linq29/JS23-Kadai6-PW52A05" aria-label="JINJAZ!のGitHubリポジトリを開く">
+          <img src="./images/sd-jinjaz.jpg" alt="サイドプロジェクト「JINJAZ! 神社巡礼メモ」のサムネイル" loading="lazy" width="600"
             height="400" />
         </a>
         <div class="card-body side-card-body">
           <div class="meta">
-            <span class="tag" data-i18n="side.jinjaz.tag">Node.js練習</span>
+            <span class="tag">Node.js練習</span>
             <span class="year">2026.01</span>
           </div>
-          <h3 data-i18n="side.jinjaz.title">神社巡礼メモ</h3>
+          <h3>神社巡礼メモ</h3>
           <div class="card-actions">
             <a target="_blank" rel="noopener noreferrer" class="link" href="https://github.com/linq29/JS23-Kadai6-PW52A05"
-              aria-label="JINJAZ!のGitHubリポジトリを見る" data-i18n-aria-label="side.jinjaz.githubAria">GitHub</a>
+              aria-label="JINJAZ!のGitHubリポジトリを見る">GitHub</a>
           </div>
         </div>
       </article>
@@ -215,43 +215,43 @@
       <article class="side-card">
         <a target="_blank" rel="noopener noreferrer" class="side-thumb"
           href="https://drive.google.com/drive/folders/13MwYf7njZ9Zfg_vJkMQRe8jFsAc9pcuP?usp=drive_link"
-          aria-label="クイズシステムの資料を開く" data-i18n-aria-label="side.quiz.thumbAria">
-          <img src="./images/sd-quiz.jpg" alt="サイドプロジェクト「クイズシステム」のサムネイル" data-i18n-alt="side.quiz.thumbAlt" loading="lazy" width="600"
+          aria-label="クイズシステムの資料を開く">
+          <img src="./images/sd-quiz.jpg" alt="サイドプロジェクト「クイズシステム」のサムネイル" loading="lazy" width="600"
             height="400" />
         </a>
         <div class="card-body side-card-body">
           <div class="meta">
-            <span class="tag" data-i18n="side.quiz.tag">ラズパイ・IoT</span>
+            <span class="tag">ラズパイ・IoT</span>
             <span class="year">2025.09</span>
           </div>
-          <h3 data-i18n="side.quiz.title">クイズシステム</h3>
+          <h3>クイズシステム</h3>
           <div class="card-actions">
             <a target="_blank" rel="noopener noreferrer" class="link" href="https://github.com/linq29/IO21-Kadai3-PW52A05"
-              aria-label="クイズシステム関連のGitHubプロフィールを見る" data-i18n-aria-label="side.quiz.githubAria">GitHub</a>
+              aria-label="クイズシステム関連のGitHubプロフィールを見る">GitHub</a>
             <a target="_blank" rel="noopener noreferrer" class="link"
               href="https://drive.google.com/drive/folders/13MwYf7njZ9Zfg_vJkMQRe8jFsAc9pcuP?usp=drive_link"
-              aria-label="クイズシステムの資料を見る" data-i18n-aria-label="side.quiz.docsAria" data-i18n="common.GDrive">資料</a>
+              aria-label="クイズシステムの資料を見る">資料</a>
           </div>
         </div>
       </article>
 
       <article class="side-card">
         <a target="_blank" rel="noopener noreferrer" class="side-thumb"
-          href="https://linq29.github.io/JS22-Kadai5-PW51A01/" aria-label="花札紹介「はなふだっ!」のページを開く" data-i18n-aria-label="side.hanafuda.thumbAria">
-          <img src="./images/sd-hanafuda.jpg" alt="サイドプロジェクト「花札紹介 はなふだっ!」のサムネイル" data-i18n-alt="side.hanafuda.thumbAlt" loading="lazy" width="600"
+          href="https://linq29.github.io/JS22-Kadai5-PW51A01/" aria-label="花札紹介「はなふだっ!」のページを開く">
+          <img src="./images/sd-hanafuda.jpg" alt="サイドプロジェクト「花札紹介 はなふだっ!」のサムネイル" loading="lazy" width="600"
             height="400" />
         </a>
         <div class="card-body side-card-body">
           <div class="meta">
-            <span class="tag" data-i18n="side.hanafuda.tag">jQuery練習</span>
+            <span class="tag">jQuery練習</span>
             <span class="year">2025.07</span>
           </div>
-          <h3 data-i18n="side.hanafuda.title">花札紹介ページ</h3>
+          <h3>花札紹介ページ</h3>
           <div class="card-actions">
             <a target="_blank" rel="noopener noreferrer" class="link" href="https://github.com/linq29/JS22-Kadai5-PW51A01"
-              aria-label="花札紹介 はなふだっ!のGitHubリポジトリを見る" data-i18n-aria-label="side.hanafuda.githubAria">GitHub</a>
+              aria-label="花札紹介 はなふだっ!のGitHubリポジトリを見る">GitHub</a>
             <a target="_blank" rel="noopener noreferrer" class="link" href="https://linq29.github.io/JS22-Kadai5-PW51A01/"
-              aria-label="花札紹介 はなふだっ!のページを見る" data-i18n-aria-label="side.hanafuda.pageAria" data-i18n="common.page">ページ</a>
+              aria-label="花札紹介 はなふだっ!のページを見る">ページ</a>
           </div>
         </div>
       </article>
@@ -262,9 +262,9 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <p>© <span id="year"></span> <span data-i18n="footer.copy">LIN QIUJING. Forever WIP.</span></p>
+        <p>© <span id="year"></span> LIN QIUJING. Forever WIP.</p>
 
-        <div class="social" aria-label="SNSリンク" data-i18n-aria-label="footer.socialAria">
+        <div class="social" aria-label="SNSリンク">
           <a target="_blank" rel="noopener noreferrer" class="icon-btn" href="https://github.com/linq29"
             aria-label="GitHub" title="GitHub">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -292,9 +292,9 @@
   </footer>
 
   <!-- JS -->
-  <script src="./js/translations/ja.js" defer></script>
-  <script src="./js/translations/en.js" defer></script>
-  <script src="./js/main.js" defer></script>
+  <script src="./js/translations/ja.js"></script>
+  <script src="./js/translations/en.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
